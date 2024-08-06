@@ -1,0 +1,153 @@
+/* Page.module.css */
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .marginLeftPadding {
+    margin-left: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tesisButton {
+    background-color: #5e86bb;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tesisButton:hover {
+    background-color: #848dc5;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .addButton {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .addButton:hover {
+    background-color: orange;
+  }
+  
+  .cancelButton {
+    background-color:#e74c3c;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cancelButton:hover {
+    background-color: orange;
+  }
+  
+  .facilitiesContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust the minmax value to control the item width */
+    gap: 20px; /* Space between grid items */
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .chartContainer {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .facilityInfo {
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .facilityInfo h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .facilityInfo p {
+    margin: 5px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon {
+    margin-right: 8px;
+    font-size: 16px;
+  }
+  
+  .button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: orange;
+  }
+  
+  .deleteButton {
+    margin-right: 10px; /* Add space to the right of the delete button */
+  }
+  
+  .buttonContainer {
+    display: flex;
+    gap: 10px; /* Add space between buttons */
+  }
+  

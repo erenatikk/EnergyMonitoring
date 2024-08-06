@@ -1,6 +1,128 @@
 .profileIcon {
+  border-radius: 50%;
+  margin: 10px 0;
+  cursor: pointer;
+}
 
-    border-radius: 50%;
-    margin-right: 20px;
-    cursor: pointer;
-  }
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px 20px; /* Add padding at the top to account for the fixed add user section */
+}
+
+.marginLeftPadding {
+  margin-left: 50px;
+}
+
+.rowCenter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Start items from the left */
+}
+
+.chartContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-basis: calc(50% - 20px); /* Two items per row, minus the margins */
+  box-sizing: border-box;
+}
+
+.facilityInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.boldText {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.button {
+  margin: 5px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.edit {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.edit:hover {
+  background-color: orange;
+}
+
+.delete {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.delete:hover {
+  background-color: orange;
+}
+
+.add {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.add:hover {
+  background-color: orange;
+}
+
+.input {
+  margin: 8px 0;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: calc(100% - 20px); /* Full width minus padding */
+  box-sizing: border-box;
+}
+
+.saveButton {
+  background-color: #e74c3c;
+  color: white;
+  margin-top: 10px;
+}
+
+.saveButton:hover {
+  background-color: orange;
+}
+
+.cancelButton {
+  background-color: #6279a7;
+  color: white;
+  margin-top: 10px;
+}
+
+.cancelButton:hover {
+  background-color: #2d95be;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.inputContainer input {
+  width: 90%;
+  max-width: 280px;
+}
