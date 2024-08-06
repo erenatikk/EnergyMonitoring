@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./AlarmSistem.css";
 
 const AlarmSistemi = () => {
   return (

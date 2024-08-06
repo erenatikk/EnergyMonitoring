@@ -48,10 +48,10 @@ const Sidebar = () => {
                   <Link href="/tesisler" className={styles.expandedLink}>
                     Modül 1
                   </Link>
-                  <Link href="/users" className={styles.expandedLink}>
+                  <Link href="/tesisler" className={styles.expandedLink}>
                     Modül 2
                   </Link>
-                  <Link href="/alarm" className={styles.expandedLink}>
+                  <Link href="/tesisler" className={styles.expandedLink}>
                     Modül 3
                   </Link>
                 </div>
@@ -64,6 +64,12 @@ const Sidebar = () => {
               </Link>
             </li>
             <li className={styles.navItem}>
+              <Link href="/users" className={styles.link}>
+                <Icon icon="dashicons:chart-pie" />
+                <span className={styles.linkText}>kullanıcı</span>
+              </Link>
+            </li>
+            <li className={styles.navItem}>
               <Link href="/alarm" className={styles.link}>
                 <Icon icon="streamline:notification-alarm-2" />
                 <span className={styles.linkText}>Alarm</span>
@@ -73,6 +79,12 @@ const Sidebar = () => {
               <Link href="/ayarlar" className={styles.link}>
                 <Icon icon="uil:setting" />
                 <span className={styles.linkText}>Ayarlar</span>
+              </Link>
+            </li>
+           <li className={styles.navItem}>
+              <Link href="/user" className={styles.link}>
+                <Icon icon="uil:setting" />
+                <span className={styles.linkText}>kullanıcı</span>
               </Link>
             </li>
           </ul>

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import AlarmSistemi from "@/components/AlarmSistemi";
+import AlarmSistemi from "@/components/AlarmSistem";
 
 function Page() {
     return (
@@ -17,8 +17,8 @@ function Page() {
             </div>
             <AlarmSistemi />
             <div>
-            <button className="button1">Button1</button>
-            <button className="button2">Button2</button>
+            <button className="button">Button</button>
+            <button className="button">Button</button>
             </div>
           </div>
         </div>

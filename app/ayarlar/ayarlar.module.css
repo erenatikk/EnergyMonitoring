@@ -28,7 +28,7 @@
   .button {
     display: inline-block; /* Inline-block for buttons */
     padding: 0px 15px; /* Padding for buttons */
-    background-color: #ff7e5f; /* Button background color */
+    background-color: #e74c3c; /* Button background color */
     color: white; /* Button text color */
     border: none; /* Remove default border */
     border-radius: 4px; /* Rounded corners for buttons */

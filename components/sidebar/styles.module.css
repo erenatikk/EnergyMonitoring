@@ -14,7 +14,6 @@
   transform: translateX(-100%);
   transition: transform 0.3s ease;
   z-index: 1000; /* Ensure it stays above other content */
-  text-transform: uppercase;
 }
 
 .sidebar.open {
@@ -45,7 +44,7 @@
 
 .menu:hover {
   color: orange;
-  background: #f0f0f0; /* Light background on hover */
+  background: white; /* Light background on hover */
 }
 
 /* Floating button outside the sidebar */
@@ -53,7 +52,7 @@
   position: relative;
   top: 0px; /* Align with the top of the sidebar */
   left: 0;
-  background: white;
+  background: #f8f9fb;
   border: none;
   cursor: pointer;
   z-index: 1001; /* Ensure the button is above other content */
@@ -66,7 +65,7 @@
 
 .menuFloating:hover {
   color: orange;
-  background: #f0f0f0; /* Light background on hover */
+  background: #f8f9fb; /* Light background on hover */
 }
 
 /* Adjust button position when the sidebar is open */
@@ -104,7 +103,7 @@
 
 .link:hover {
   color: orange;
-  background: #f0f0f0; /* Light background on hover */
+  background: #f8f9fb; /* Light background on hover */
 }
 
 .linkText {
@@ -134,7 +133,7 @@
 
 .expandedLink:hover {
   color: orange;
-  background: #f0f0f0; /* Light background on hover */
+  background: #f8f9fb; /* Light background on hover */
 }
 
 /* Responsive adjustments */

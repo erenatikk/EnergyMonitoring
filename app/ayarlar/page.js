@@ -8,9 +8,9 @@ function Page() {
   return (
     <div className={styles.container}>
 
-      <Link href='/users'>
+      <Link href='#'>
         <div className={styles.box}>
-          Kullanıcılar
+          #
           <div className={styles.buttonContainer}>
             <button className={styles.button}>
             <Icon icon="icomoon-free:menu" className={styles.icon} />
@@ -19,9 +19,9 @@ function Page() {
         </div>
       </Link>
 
-      <Link href='alarm'>
+      <Link href='#'>
       <div className={styles.box}>
-        Alarm
+        #
         <div className={styles.buttonContainer}>
         <button className={styles.button}>
             <Icon icon="icomoon-free:menu" className={styles.icon} />
@@ -30,9 +30,9 @@ function Page() {
       </div>
       </Link>
 
-      <Link href='tesisler'>
+      <Link href='#'>
       <div className={styles.box}>
-        Tesisler
+        #
         <div className={styles.buttonContainer}>
         <button className={styles.button}>
             <Icon icon="icomoon-free:menu" className={styles.icon} />
@@ -41,9 +41,9 @@ function Page() {
       </div>
       </Link>
 
-      <Link href='Sayac'>
+      <Link href='#'>
       <div className={styles.box}>
-        Sayaçlar
+        #
         <div className={styles.buttonContainer}>
         <button className={styles.button}>
             <Icon icon="icomoon-free:menu" className={styles.icon} />
@@ -52,9 +52,9 @@ function Page() {
       </div>
       </Link>
 
-      <Link href='Sayac'>
+      <Link href='#'>
       <div className={styles.box}>
-        Sayaçlar
+        #
         <div className={styles.buttonContainer}>
         <button className={styles.button}>
             <Icon icon="icomoon-free:menu" className={styles.icon} />
