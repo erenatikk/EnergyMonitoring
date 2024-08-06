@@ -11,7 +11,7 @@ function Page() {
         <div className="column-center">
           <div className="row-center">
             <div className="chart-container">
-              <Image src={defaultProfileLogo} width={50} height={50} style={styles.profileIcon}/>
+              <Image src={defaultProfileLogo} width={50} height={50} style={styles.profileIcon} placeholder="blur"/>
               
               <div className="facility-info">
                 <h3>admin admin</h3>
@@ -23,7 +23,7 @@ function Page() {
               </div>
             </div>
             <div className="chart-container">
-              <img src="/path/to/image2.png" alt="Facility" />
+              <img src={defaultProfileLogo} alt="Facility" />
               <div className="facility-info">
                 <h3>admin admin</h3>
                 <p className="bold-text">Pozisyon: admin</p>
