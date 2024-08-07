@@ -34,57 +34,60 @@ const Sidebar = () => {
           <ul>
             <li className={styles.navItem}>
               <Link href="/dashboard" className={styles.link}>
-                <Icon icon="uil:panel-add" />
+                <Icon icon="uil:panel-add" width="1.3em" height="1.3em"/>
                 <span className={styles.linkText}>Panel</span>
               </Link>
             </li>
             <li className={styles.navItem}>
               <div onClick={toggleTesisler} className={styles.link} style={{ cursor: 'pointer' }}>
-                <Icon icon="carbon:location-company" />
+                <Icon icon="carbon:location-company" width="1.3em" height="1.3em"/>
                 <span className={styles.linkText}>Tesisler</span>
               </div>
               {isTesislerExpanded && (
                 <div className={`${styles.expanded} ${isTesislerExpanded ? styles.open : ''}`}>
                   <Link href="/tesisler" className={styles.expandedLink}>
-                    Modül 1
+                    <Icon icon="arcticons:microsoft-company-portal" width="1.3em" height="1.3em"/>
+                    Modül 
                   </Link>
                   <Link href="/tesisler" className={styles.expandedLink}>
-                    Modül 2
+                    <Icon icon="arcticons:microsoft-company-portal" width="1.3em" height="1.3em"/>
+                    Modül 
                   </Link>
                   <Link href="/tesisler" className={styles.expandedLink}>
-                    Modül 3
+                    <Icon icon="arcticons:microsoft-company-portal" width="1.3em" height="1.3em"/>
+                    Modül 
                   </Link>
                 </div>
               )}
             </li>
             <li className={styles.navItem}>
               <Link href="/Sayac" className={styles.link}>
-                <Icon icon="dashicons:chart-pie" />
+                <Icon icon="material-symbols-light:electric-meter-outline" width="1.3em" height="1.3em" />
                 <span className={styles.linkText}>Sayaç</span>
               </Link>
             </li>
             <li className={styles.navItem}>
               <Link href="/users" className={styles.link}>
-                <Icon icon="dashicons:chart-pie" />
-                <span className={styles.linkText}>kullanıcı</span>
+                <Icon icon="ph:user-light" width="1.3em" height="1.3em"/>
+                <span className={styles.linkText}>Kullanıcı</span>
+              </Link>
+            </li>
+            <li className={styles.navItem}>
+              <Link href="/admin" className={styles.link}>
+                <Icon icon="lets-icons:user-add-alt" width="1.3em" height="1.3em" />
+                <span className={styles.linkText}>Kullanıcı Ekle</span>
               </Link>
             </li>
             <li className={styles.navItem}>
               <Link href="/alarm" className={styles.link}>
-                <Icon icon="streamline:notification-alarm-2" />
+                <Icon icon="streamline:notification-alarm-2" width="1.3em" height="1.3em" />
                 <span className={styles.linkText}>Alarm</span>
               </Link>
             </li>
             <li className={styles.navItem}>
               <Link href="/ayarlar" className={styles.link}>
-                <Icon icon="uil:setting" />
+                <Icon icon="uil:setting"width="1.3em" height="1.3em" />
                 <span className={styles.linkText}>Ayarlar</span>
-              </Link>
-            </li>
-           <li className={styles.navItem}>
-              <Link href="/user" className={styles.link}>
-                <Icon icon="uil:setting" />
-                <span className={styles.linkText}>kullanıcı</span>
               </Link>
             </li>
           </ul>

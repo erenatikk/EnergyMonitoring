@@ -106,13 +106,13 @@
 }
 
 .cancelButton {
-  background-color: #6279a7;
+  background-color: #e74c3c;
   color: white;
   margin-top: 10px;
 }
 
 .cancelButton:hover {
-  background-color: #2d95be;
+  background-color: orange;
 }
 
 .inputContainer {

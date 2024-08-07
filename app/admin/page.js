@@ -2,10 +2,11 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import defaultProfileLogo from "../../public/images/defaultProfileLogo.jpg";
-import styles from "./kullanici.module.css";
+import styles from "./admin.module.css";
 
 function Page() {
   const initialUsers = [
+    // Uncomment and add initial user data if needed
     // {
     //   name: "İsim ",
     //   position: "Pozisyon ",

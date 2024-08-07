@@ -93,12 +93,13 @@
 .link {
   color: #333;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 15px;
   transition: color 0.3s;
   display: flex;
   align-items: center;
   padding: 10px; /* Add padding for better click area */
   border-radius: 5px; /* Rounded corners for a modern look */
+  font-weight: 500;
 }
 
 .link:hover {
