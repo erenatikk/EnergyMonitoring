@@ -1,34 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import defaultProfileLogo from "../../public/images/defaultProfileLogo.jpg";
 import Image from "next/image";
+import { fetchUsers, updateUser, deleteUser } from "../../services/api.js";
 
 function Page() {
   const [showUsers, setShowUsers] = useState(false);
-  const [users, setUsers] = useState([
-    {
-      id: 1,
-      name: "admin admin",
-      position: "admin",
-      company: "Çayyolu Ofisi",
-      address: "admin",
-    },
-    {
-      id: 2,
-      name: "admin admin",
-      position: "admin",
-      company: "Çayyolu Ofisi",
-      address: "admin",
-    },
-    {
-      id: 3,
-      name: "admin admin",
-      position: "admin",
-      company: "Çayyolu Ofisi",
-      address: "admin",
-    },
-  ]);
+  const [users, setUsers] = useState([]);
   const [editingUser, setEditingUser] = useState(null);
   const [editedUser, setEditedUser] = useState({
     id: "",
@@ -37,6 +16,16 @@ function Page() {
     company: "",
     address: "",
   });
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    if (showUsers) {
+      // Kullanıcıları backend'den çekme
+      fetchUsers()
+        .then((data) => setUsers(data))
+        .catch((error) => setError(error.message));
+    }
+  }, [showUsers]);
 
   const handleToggleUsers = () => {
     setShowUsers(!showUsers);
@@ -44,12 +33,22 @@ function Page() {
 
   const handleEditUser = (user) => {
     setEditingUser(user.id);
-    setEditedUser(user);
+    setEditedUser({
+      id: user.id,
+      name: user.username, 
+      position: user.position,
+      company: user.company,
+      address: user.address,
+    });
   };
 
   const handleDeleteUser = (id) => {
-    const updatedUsers = users.filter((user) => user.id !== id);
-    setUsers(updatedUsers);
+    deleteUser(id)
+      .then(() => {
+        const updatedUsers = users.filter((user) => user.id !== id);
+        setUsers(updatedUsers);
+      })
+      .catch((error) => setError(error.message));
   };
 
   const handleChange = (e) => {
@@ -61,11 +60,20 @@ function Page() {
   };
 
   const handleSaveUser = () => {
-    const updatedUsers = users.map((user) =>
-      user.id === editedUser.id ? editedUser : user
-    );
-    setUsers(updatedUsers);
-    setEditingUser(null);
+    updateUser(editedUser.id, {
+      username: editedUser.name, // Eğer backend'de isim `username` olarak geçiyorsa
+      position: editedUser.position,
+      company: editedUser.company,
+      address: editedUser.address,
+    })
+      .then((updatedUser) => {
+        const updatedUsers = users.map((user) =>
+          user.id === editedUser.id ? updatedUser : user
+        );
+        setUsers(updatedUsers);
+        setEditingUser(null);
+      })
+      .catch((error) => setError(error.message));
   };
 
   return (
@@ -91,7 +99,7 @@ function Page() {
                     />
                   </div>
                   <div className="facility-info">
-                    <h3 className="bold-text">{user.name}</h3>
+                    <h3 className="bold-text">{user.username}</h3>
                     <div>
                       <span className="bold-text">Pozisyon:</span>
                       <span className="thin-text">{user.position}</span>
@@ -176,6 +184,7 @@ function Page() {
           </div>
         </div>
       )}
+      {error && <p className="error-message">{error}</p>}
     </div>
   );
 }
