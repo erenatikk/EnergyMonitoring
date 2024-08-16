@@ -1,0 +1,160 @@
+/* Sidebar styles */
+.sidebar {
+  width: 200px;
+  height: calc(100vh - 50px);
+  position: relative;
+  top: 0px; 
+  left: 0;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0.052083333in 11.25pt -9px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.rotate-180 {
+  display: inline-block; 
+  transform: rotate(180deg);
+  transition: transform 0.3s ease; 
+}
+
+.sidebarmeu {
+  width:60px;
+  height:40px;
+}
+
+.menu {
+  position: relative;
+  top:0px; 
+  right: 0px;
+  background: white;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  display: block; 
+}
+
+.menu:hover {
+  color: orange;
+  background: white;
+}
+
+.menuFloating {
+  position: relative;
+  top: 0px;
+  left: 0;
+  background: #f8f9fb;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  transition: left 0.3s ease; 
+  display: block; 
+  font-weight: bold;
+  font-size: 30px; 
+  color: black;
+}
+
+.menuFloating:hover {
+  color: orange;
+  background: #f8f9fb; 
+}
+
+
+.sidebar.open ~ .menuFloating {
+  left: 300px; 
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.navItem {
+  margin: 10px 0;
+  list-style-type: none; 
+}
+
+.link {
+  color: #333;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  padding: 10px; 
+  border-radius: 5px;
+  font-weight: 500;
+
+}
+
+.link:hover {
+  color: orange;
+  background: #f8f9fb; 
+}
+
+.linkText {
+  margin-left: 10px;
+  width: 120px;
+}
+
+
+.expanded {
+  margin-left: 20px;
+  display: none;
+}
+
+.expanded.open {
+  display: block;
+}
+
+.expandedLink {
+  color: #666;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px; 
+  border-radius: 5px;
+}
+
+.expandedLink:hover {
+  color: orange;
+  background: #f8f9fb;
+}
+
+@media (max-width: 500px) {
+  .navItem {
+    justify-content: center;
+  }
+
+  .linkText {
+    display: none;
+  }
+}
+
+.content {
+  margin-left: 300px; 
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0; 
+  }
+}
+
