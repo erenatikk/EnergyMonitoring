@@ -2,8 +2,10 @@
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import { createEnergyMeter } from "../../services/api";
+import { useRouter } from "next/navigation"; // Import useRouter
 
 const Page = () => {
+  const router = useRouter(); // Initialize useRouter
   const [subscriptionType, setSubscriptionType] = useState("Orta Gerilim (OG)");
   const [formData, setFormData] = useState({
     serialNumber: "",
@@ -149,6 +151,11 @@ const Page = () => {
           Fatura Hesapla
         </button>
       </form>
+
+      {/* Back button to navigate to Sayaç page */}
+      <button onClick={() => router.push("/Sayac")} className="button back-button">
+        Sayaç Sayfasına Dön
+      </button>
     </div>
   );
 };

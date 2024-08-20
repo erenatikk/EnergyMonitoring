@@ -27,7 +27,7 @@ const data = {
 
 function Sayac() {
     const [isVisible, setIsVisible] = useState(true);
-    const [counterList, setCounterList] = useState([1, 2, 3, 4, 5]);
+    const [counterList, setCounterList] = useState([1, 2]);
 
     const toggleVisibility = () => {
         setIsVisible(!isVisible);

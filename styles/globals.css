@@ -337,8 +337,25 @@ body {
   cursor: pointer;
   background-color: #e74c3c;
   color: white;
-
 }
+.back-button {
+  position: absolute;
+  top: 90px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #273165;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #ee7b54;
+}
+
 /* !sayac ekle end */
 
 .form-container {
