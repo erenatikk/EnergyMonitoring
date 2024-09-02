@@ -4,6 +4,7 @@ import { Icon } from '@iconify/react';
 import locationIcon from '@iconify/icons-mdi/location';
 import emailIcon from '@iconify/icons-mdi/email';
 import phoneIcon from '@iconify/icons-mdi/phone';
+import deleteIcon from '@iconify/icons-mdi/delete'; // Add this import
 import styles from './tesisler.module.css';
 
 function Page() {
@@ -163,20 +164,35 @@ function Page() {
             <div className={styles.facilityInfo}>
               <div className={styles.facilityNameContainer}>
                 <a href="/Sayac" className={styles.facilityLink}>
-                  <h3>{facility.name}</h3>
+                  <h3 className={styles.facilityName}>{facility.name}</h3>
                 </a>
               </div>
-              <p><Icon icon={locationIcon} className={styles.icon} />Adres: {facility.address}</p>
-              <p><Icon icon={emailIcon} className={styles.icon} />Email: {facility.email}</p>
-              <p><Icon icon={phoneIcon} className={styles.icon} />İletişim: {facility.phone}</p>
+              <div className={styles.infoBox}>
+                <Icon icon={locationIcon} className={styles.icon} />
+                <span className={styles.label}>Adres:</span> 
+                <span className={styles.value}>{facility.address}</span>
+              </div>
+              <div className={styles.infoBox}>
+                <Icon icon={emailIcon} className={styles.icon} />
+                <span className={styles.label}>Email:</span> 
+                <span className={styles.value}>{facility.email}</span>
+              </div>
+              <div className={styles.infoBox}>
+                <Icon icon={phoneIcon} className={styles.icon} />
+                <span className={styles.label}>İletişim:</span> 
+                <span className={styles.value}>{facility.phone}</span>
+              </div>
             </div>
             <div className={styles.buttonContainer}>
-              <button className={`${styles.button} ${styles.deleteButton}`} onClick={() => deleteFacility(index)}>
-                Sil
-              </button>
-              <button className={styles.button} onClick={() => editFacility(index)}>
+            <button className={styles.button} onClick={() => editFacility(index)}>
                 Düzenle
               </button>
+              <Icon
+                icon={deleteIcon}
+                className={`${styles.icon} ${styles.deleteIcon}`}
+                onClick={() => deleteFacility(index)}
+              />
+              
             </div>
           </div>
         ))}

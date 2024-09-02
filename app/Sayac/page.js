@@ -41,6 +41,12 @@ function Sayac() {
                 </button>
             </Link>
 
+            <Link href="/tesisler">
+                <button className="tesisler-button">
+                    Tesisler
+                </button>
+            </Link>
+
             {isVisible && (
                 <div className="flex-card">
                     {counterList.map((_, index) => (

@@ -1,6 +1,6 @@
 /* Sidebar styles */
 .sidebar {
-  width: 200px;
+  width: 60px;
   height: calc(100vh - 50px);
   position: relative;
   top: 0px; 
@@ -12,23 +12,19 @@
   flex-direction: column;
   align-items: center;
   transform: translateX(-100%);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, width 0.3s ease;
   z-index: 1000;
 }
 
 .sidebar.open {
   transform: translateX(0);
+  width: 200px;
 }
 
 .rotate-180 {
   display: inline-block; 
   transform: rotate(180deg);
   transition: transform 0.3s ease; 
-}
-
-.sidebarmeu {
-  width:60px;
-  height:40px;
 }
 
 .menu {
@@ -67,9 +63,8 @@
   background: #f8f9fb; 
 }
 
-
 .sidebar.open ~ .menuFloating {
-  left: 300px; 
+  left: 200px; 
 }
 
 .logo {
@@ -86,6 +81,7 @@
 .navItem {
   margin: 10px 0;
   list-style-type: none; 
+  text-align: left;
 }
 
 .link {
@@ -98,7 +94,6 @@
   padding: 10px; 
   border-radius: 5px;
   font-weight: 500;
-
 }
 
 .link:hover {
@@ -108,9 +103,14 @@
 
 .linkText {
   margin-left: 10px;
-  width: 120px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
+.sidebar.open .linkText {
+  opacity: 1;
+}
 
 .expanded {
   margin-left: 20px;
@@ -148,8 +148,12 @@
 }
 
 .content {
-  margin-left: 300px; 
+  margin-left: 60px; 
   padding: 20px;
+}
+
+.sidebar.open ~ .content {
+  margin-left: 200px;
 }
 
 @media (max-width: 768px) {
@@ -157,4 +161,3 @@
     margin-left: 0; 
   }
 }
-

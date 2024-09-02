@@ -154,8 +154,9 @@ const Page = () => {
 
       {/* Back button to navigate to Sayaç page */}
       <button onClick={() => router.push("/Sayac")} className="button back-button">
-        Sayaç Sayfasına Dön
+        Sayaç
       </button>
+
     </div>
   );
 };

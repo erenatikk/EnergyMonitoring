@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import defaultProfileLogo from "../../public/images/defaultProfileLogo.jpg";
 import Image from "next/image";
+import Link from "next/link";
+import { Icon } from '@iconify/react';
 
 function Page() {
   const [users, setUsers] = useState([
@@ -26,7 +28,6 @@ function Page() {
       company: "Çayyolu Ofisi",
       address: "admin",
     },
-
   ]);
   const [editingUser, setEditingUser] = useState(null);
   const [editedUser, setEditedUser] = useState({
@@ -66,6 +67,12 @@ function Page() {
   return (
     <div className="flex-container">
       <div className="margin-left-padding">
+        <Link href="/admin" passHref>
+          <button className="add-user-button" style={{ textDecoration: 'none' }}>
+            <span>Kullanıcı Ekle</span>
+          </button>
+        </Link>
+
         <div className="column-center">
           <div className="row-center">
             {users.map((user) => (
